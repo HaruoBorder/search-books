@@ -38,17 +38,27 @@ function _itemsChanged(items) {
         const thumbnail = items[i].volumeInfo.imageLinks.thumbnail;
         const description = items[i].volumeInfo.description;
         booksElement.innerHTML += `
-        <div>
-            <img src="${thumbnail}" alt="">
-            <h2>${title}
-            </h2>
-            <div>${description}</div>
+        
+    <a href="./detail.html?id=${items[i].id}">
+        <div class="card layout horizontal">
+            <div class="flex">
+             <img src="${thumbnail}" alt="">
+            </div>
+         
+           <div class="flex-2 layout vertical">
+             <h2>${title}
+             </h2>
+             <div>${description}</div>
+           </div>
+        
         </div>
+    </a>
+        
         `
     }
 }
 
-window.addEventListener('load', function(){
+window.addEventListener('load', function () {
     const q = getParamater('q');
     console.log(q);
     searchBooksBy(q);

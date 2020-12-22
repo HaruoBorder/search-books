@@ -1,0 +1,43 @@
+section {
+    padding: 12px;
+    margin: 24px 0;
+}
+
+#itemContainer {
+    width: 100%;
+    padding: 16px 12px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+#itemHeader > * {
+    text-align: center;
+}
+
+#itemHeader h2 {
+    margin: 0;
+}
+
+#purchaseLinkWrapper {
+    margin: 24px 0;
+}
+
+@media screen and (min-width: 769px) {
+    #itemContainer {
+        max-width: 600px;
+    }
+
+    #itemHeader {
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+    }
+
+    #itemHeader > * {
+        text-align: left;
+    }
+
+    #itemHeader .information {
+        padding: 0 24px;
+    }
+}

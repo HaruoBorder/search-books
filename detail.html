@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本の詳細 - RAKUMAオンラインスクール</title>
+
+    <meta property="og:title" content="GoalBook - RAKUMAオンラインスクール">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://goal.rabico.dev/book/index.html">
+    <meta property="og:description" content="フロントエンド(HTML、CSS、JavaScript)の学習で目指す本の検索アプリです。">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="./images/favicon_32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="./images/favicon_96x96.png" sizes="96x96">
+
+    <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./detail.css">
+</head>
+<body>
+    <header class="flex flex-equal-justified">
+        <div>GoalBook</div>
+        <a href="https://rabico.dev" target="_blank">prograbi</a>
+
+    </header>
+
+        <div id="headerActionWrapper" class="layout vertical center-center">
+            <div>
+                <form action="./results.html" onsubmit="_onsubmit(event);">
+                    <input id="inputQuery" type="text" name="q" placeholder="タイトル" tabindex="0">
+                    <button class="btn contained" tabindex="1">本を検索</button>
+                </form>
+            </div>
+        </div>
+    
+    <section class="layout horizontal center-justified">
+        <div id="itemContainer">
+            <div id="itemHeader" class="layout vertical">
+                <div>
+                    <img id="bookThumbnail" src="" alt="">
+                </div>
+                <div class="flex information">
+                    <h2 id="bookTitle"></h2>
+                    <div>ページ数: <span id="bookPageCount"></span></div>
+                    <div>出版社: <span id="bookPublisher"></span></div>
+                    <div>著者: <span id="bookAuthor"></span></div>
+                </div>
+            </div>
+            <div>
+                <div id="purchaseLinkWrapper" class="layout horizontal end-justified">
+                    <a id="bookAnchor" href="#" target="_blank"><button class="btn contained">購入ページ</button></a>
+                </div>
+                <div>
+                    <h3>詳細</h3>
+                    <div id="description"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IE Polifill -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/3.3.1/es6-promise.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.min.js"></script>
+
+    <script src="./common.js"></script>
+    <script src="./detail.js"></script>
+</body>
+</html>
