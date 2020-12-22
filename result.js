@@ -35,7 +35,9 @@ function _itemsChanged(items) {
     const booksElement = document.getElementById('books');
     for (let i = 0; i < items.length; i++) {
         const title = items[i].volumeInfo.title;
-        const thumbnail = items[i].volumeInfo.imageLinks.thumbnail;
+        let thumbnail;
+        if (items[i].volumeInfo.imageLinks)
+            thumbnail = items[i].volumeInfo.imageLinks.thumbnail;
         const description = items[i].volumeInfo.description;
         booksElement.innerHTML += `
         
